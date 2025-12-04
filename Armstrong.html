@@ -1,0 +1,19 @@
+<html>
+
+<body>
+  <script>
+    function isArmstrong(num) {
+      let digits = num.toString().split('');
+      let power = digits.length;
+
+      let sum = digits.reduce((acc, d) => acc + Number(d) ** power, 0);
+      return sum === num;
+    }
+
+    // Example:
+    console.log(isArmstrong(9474)); // true (4-digit Armstrong)
+    console.log(isArmstrong(9475)); // false
+  </script>
+</body>
+
+</html>
